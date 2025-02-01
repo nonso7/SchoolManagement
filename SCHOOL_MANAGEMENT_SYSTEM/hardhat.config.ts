@@ -33,9 +33,18 @@ const config: HardhatUserConfig = {
     }
   },
 
-  // etherscan: {
-  //   apiKey: ETHERSCAN_API_KEY, // Corrected to use the environment variable
-  // },
+  etherscan: {
+    apiKey: "9ZFIF17WYWHAYVUJP65E3CFCWMU1K8FWGI", 
+    customChains:[
+      { network: "lisk_sepolia",
+        chainId: 4202,
+        urls: {
+          apiURL: "https://rpc.sepolia-api.lisk.com",
+          browserURL: ""
+        }
+      }
+    ]
+  },
 
   sourcify: {
     enabled: true, // Sourcify verification enabled
